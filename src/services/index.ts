@@ -45,7 +45,6 @@ export const fetchMoviesSearch = async (page: number, query: string) => {
 export const fetchMovieDetails = async (movieId: number) => {
   const uri = `${process.env.API_BASE}/movie/${movieId}?language=pt-BR&api_key=${process.env.API_KEY}`;
 
-  console.log(uri)
   const { data } = await axios.get(uri);
   let retorno: FilmeDetailsModel = {
     title: data.title,
