@@ -2,21 +2,13 @@
   "name": "diegoflix-api",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "ts-node-dev ./src/index.ts",
-    "production": "node ./build/index.js",
-    "postinstall": "tsc"
-  },
   "dependencies": {
-    "@types/cors": "^2.8.14",
     "axios": "^1.5.1",
     "cors": "^2.8.5",
-    "dayjs": "^1.11.10",
-    "dotenv": "^16.3.1",
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.14",
     "@types/express": "^4.17.18",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
@@ -24,8 +16,12 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.2.2"
   },
+  "scripts": {
+    "start": "ts-node-dev ./src/index.ts",
+    "postinstall": "tsc",
+    "production": "node ./build/index.js"
+  },
   "engines": {
-    "npm": "10.1.0",
     "node": "18.x"
   }
 }
