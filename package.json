@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "npm run ts-node-dev ./src/index.ts"
+  },
   "dependencies": {
     "@types/cors": "^2.8.14",
     "axios": "^1.5.1",
