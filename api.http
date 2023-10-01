@@ -1,0 +1,5 @@
+GET https://diegoflix-api-d8fb4838e911.herokuapp.com/allMovies?page=1
+
+###
+GET http://localhost:3333/allMovies?page=1
+
