@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node-dev ./src/index.ts",
+    "production": "node ./build/index.js",
     "postinstall": "tsc"
   },
   "dependencies": {
