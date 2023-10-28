@@ -56,7 +56,7 @@ export const fetchMovieDetails = async (movieId: number) => {
     imageCapa: data.poster_path,
     imageThumb: data.backdrop_path,
     year: parseInt(dayjs(data.release_date).format("YYYY")),
-    trailerKey: dataTrailer.results[0].key
+    trailerKey: dataTrailer.results[0]?.key
   };
 
   return retorno;
