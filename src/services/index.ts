@@ -44,8 +44,11 @@ export const fetchMoviesSearch = async (page: number, query: string) => {
 
 export const fetchMovieDetails = async (movieId: number) => {
   const uri = `${process.env.API_BASE}/movie/${movieId}?language=pt-BR&api_key=${process.env.API_KEY}`;
-
   const { data } = await axios.get(uri);
+
+  const uriTrailer = `${process.env.API_BASE}/movie/${movieId}/videos?language=pt-BR&api_key=${process.env.API_KEY}`;
+  const { data: dataTrailer } = await axios.get(uriTrailer);
+
   let retorno: FilmeDetailsModel = {
     title: data.title,
     sinopse: data.overview,
@@ -53,6 +56,7 @@ export const fetchMovieDetails = async (movieId: number) => {
     imageCapa: data.poster_path,
     imageThumb: data.backdrop_path,
     year: parseInt(dayjs(data.release_date).format("YYYY")),
+    trailerKey: dataTrailer.results[0].key
   };
 
   return retorno;

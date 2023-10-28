@@ -12,6 +12,7 @@ export type FilmeModel = {
     imageCapa: string;
     imageThumb: string;
     year: number;
+    trailerKey: string;
   }
 
   export type FilmeDetailUniq = {
