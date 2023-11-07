@@ -28,6 +28,6 @@
     "production": "node ./build/index.js"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   }
 }
